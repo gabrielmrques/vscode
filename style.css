@@ -1,0 +1,21 @@
+.container {
+    text-align: center;
+    margin: 50px auto;
+  }
+  
+  input, button {
+    padding: 10px;
+    margin: 5px;
+  }
+  
+  li {
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+  }
