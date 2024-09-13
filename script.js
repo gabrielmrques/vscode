@@ -10,21 +10,18 @@ addButton.addEventListener('click', () => {
     taskList.appendChild(li);
     taskInput.value = '';
 
-    // Adicionar evento para marcar como concluída
+    
     li.addEventListener('click', () => {
       li.classList.toggle('completed');
     });
 
-    // Adicionar evento para remover a tarefa
     li.addEventListener('contextmenu', (e) => {
       e.preventDefault();
       li.remove();
     });
   }
 });
-// ... (código existente)
 
-// Armazenar e recuperar tarefas do localStorage
 const saveTasks = () => {
     localStorage.setItem('tasks', JSON.stringify(Array.from(taskList.children).map(li => li.textContent)));
   };
@@ -36,14 +33,12 @@ const saveTasks = () => {
         const li = document.createElement('li');
         li.textContent = task;
         taskList.appendChild(li);
-        // ... (adicionar eventos de clique e contexto)
+        
       });
     }
   };
   
-  // ... (código existente)
-  
-  // Adicionar evento de duplo clique para editar
+
   li.addEventListener('dblclick', () => {
     const input = document.createElement('input');
     input.value = li.textContent;
